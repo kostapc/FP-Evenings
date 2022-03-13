@@ -1,7 +1,6 @@
-package sandbox.scala.implicits.one
+package scalablelanguageclub.sandbox.implicits.one
 
-import sandbox.scala.implicits.ContextWithParam
-import sandbox.scala.implicits.two.{ContextJust, ContextWithParam}
+import scalablelanguageclub.sandbox.implicits.two.{ContextJust, ContextWithParam}
 
 // https://www.baeldung.com/scala/implicitly
 // https://habr.com/ru/post/329600/

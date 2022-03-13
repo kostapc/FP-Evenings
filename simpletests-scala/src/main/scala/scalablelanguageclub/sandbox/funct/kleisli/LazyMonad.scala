@@ -1,4 +1,4 @@
-package sandbox.scala.funct.kleisli
+package scalablelanguageclub.sandbox.funct.kleisli
 
 trait LazyMonad[A] {
 

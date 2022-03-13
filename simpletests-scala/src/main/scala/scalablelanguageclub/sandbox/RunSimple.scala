@@ -1,4 +1,4 @@
-import scala.language.implicitConversions
+package scalablelanguageclub.sandbox
 
 object RunSimple {
 
@@ -11,7 +11,7 @@ object RunSimple {
     //testImplicit()
   }
 
-  def adder(m: Int, n: Int):Int = {
+  def adder(m: Int, n: Int): Int = {
     Console.println("adder called")
     m + n
   }
@@ -23,17 +23,3 @@ object RunSimple {
   }
 
 }
-
-/*case class A(i: Int)
-case class B(i: Int)
-
-implicit def aToB(a: A): B = {
-  println("implicit call")
-  B(a.i)
-}
-
-def testImplicit(): Unit = {
-  val a = A(1)
-  val b: B = a
-  println(s"res = $b")
-}*/

@@ -1,4 +1,4 @@
-package sandbox.scala.implicits.two
+package scalablelanguageclub.sandbox.implicits.two
 
 class ContextJust {
   val value: String = "add context value"

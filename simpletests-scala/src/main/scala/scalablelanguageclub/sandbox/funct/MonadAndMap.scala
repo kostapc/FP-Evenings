@@ -1,4 +1,4 @@
-package sandbox.scala.funct
+package scalablelanguageclub.sandbox.funct
 
 object MonadAndMap {
 

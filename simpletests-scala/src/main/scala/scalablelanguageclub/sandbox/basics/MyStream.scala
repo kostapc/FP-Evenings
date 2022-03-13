@@ -1,4 +1,4 @@
-package sandbox.scala.basics
+package scalablelanguageclub.sandbox.basics
 
 trait MyStream[+A] {
   def uncons: Option[(A, MyStream[A])]

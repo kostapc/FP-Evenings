@@ -1,4 +1,4 @@
-package sandbox.scala.funct
+package scalablelanguageclub.sandbox.funct
 
 import cats.{MonadError, MonadThrow}
 import cats.data.Ior

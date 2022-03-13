@@ -1,6 +1,6 @@
-package sandbox.scala
+package scalablelanguageclub.sandbox
 
-class ABoutLambdas {
+class AboutLambdas {
 
 }
 
