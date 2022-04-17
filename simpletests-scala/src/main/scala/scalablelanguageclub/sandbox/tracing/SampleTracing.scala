@@ -13,23 +13,22 @@ class Span[F[_]](tracingContext: TracingContext) {
 
 object Span {
 
-  def start[F[_], A, B: TracingContext](f: A => F[B]): A => F[B] = {
+  def start[F[_], A](f: A => F[A]): A => F[A] = {
     implicit val ctx: TracingContext = TracingContext(UUID.randomUUID(), null)
     span(f)
   }
 
-  def span[F[_], A, B: TracingContext](f: A => F[B])(implicit ctx: TracingContext): A => F[B] = {
+  def span[F[_], B](f: B => F[B])(implicit ctx: TracingContext): B => F[B] = {
     implicit val newCtx: TracingContext = ctx.span()
-    20
-    f()
+    f
   }
 
 }
 
-case class TracingContext (
-                          val id: UUID,
-                          val parent: UUID
-                          ) {
+case class TracingContext(
+                           id: UUID,
+                           parent: UUID
+                         ) {
 
   def span(): TracingContext = {
     TracingContext(
@@ -41,19 +40,16 @@ case class TracingContext (
 }
 
 object JustRun {
-
   def main(args: Array[String]): Unit = {
-    Span.start[Res, String] { a =>
-      Span.span {
-        new Res("asdf")
-      }(a)
+    Span.start[Res, String] {
+      /*Span.span {
+        new Res("started: " + _)
+      }*/
+      ???
     }
-
   }
 
-
   def execFun(f: String => Unit): Unit = f("HERE")
-
 }
 
 
